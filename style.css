@@ -14,11 +14,12 @@ header{
   display: flex;
   flex-direction: column;
   color: white;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
 }
+
 /* best way to center the navbar elements */
 .container{
-  border:2px solid white;
+  padding: 0 1px;
   width: 100%;
   margin: 0 auto;
   max-width: 1000px;
@@ -27,9 +28,19 @@ header{
 nav {
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
+}
+
+/* if we give padding direct to the li then it will disturb the space btwn logo and ul */
+
+nav li a {
+  text-decoration: none;
+  color: white;
+  padding:0.8rem;    
 }
 nav .logo{
   font-size: 2rem;
+  font-weight: bold;
 }
 
 
@@ -38,7 +49,68 @@ nav ul{
   list-style-type: none;
 }
 
-a {
+.selected {
+  font-weight: bold;
+}
+
+.highlight{
+  background-color: #00c2ff;
+  border-radius:8px;
+  padding: 0.5rem;
   text-decoration: none;
   color: white;
+}
+
+.content{
+  max-width: 100%;
+  margin: auto 0;
+  font-size: 1.5rem;
+}
+.content h1 {
+  color: #00c2ff;
+}
+
+footer {
+  min-height: 100px;
+  background-color: black;
+  color: white;
+  padding: 2rem;
+}
+footer ul 
+{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+footer strong{
+  color: #00c2ff;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media screen and (max-width:775px) {
+  nav ul{
+    flex-direction: column;
+  }
+  nav .highlight{
+    display: none;
+  }
+  nav li:not(:last-child){
+    margin-bottom: 1rem;
+  }
+
+  footer ul{
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  footer li {
+    margin:1rem;
+    text-align: center;
+  }
+
 }
