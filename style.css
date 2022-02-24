@@ -19,16 +19,16 @@ header{
 
 /* best way to center the navbar elements */
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .container{
   padding: 1rem;
   width: 100%;
   margin: 0 auto;
   max-width: 1000px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* if we give padding direct to the li then it will disturb the space btwn logo and ul */
@@ -71,10 +71,11 @@ nav ul{
 }
 
 footer {
-  min-height: 100px;
+  /* height: 100px; */
   background-color: black;
   color: white;
-  padding: 2rem;
+  padding: 0.9rem;
+  text-align: center;
 }
 footer ul 
 {
