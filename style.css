@@ -18,17 +18,17 @@ header{
 }
 
 /* best way to center the navbar elements */
-.container{
-  padding: 0 1px;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1000px;
-}
 
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.container{
   padding: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 /* if we give padding direct to the li then it will disturb the space btwn logo and ul */
@@ -92,6 +92,9 @@ footer p {
 }
 
 @media screen and (max-width:775px) {
+  nav {
+    align-items: flex-start;
+  }
   nav ul{
     flex-direction: column;
   }
